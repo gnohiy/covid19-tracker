@@ -1,4 +1,5 @@
 For any inquiries, please contact "yihong0327@gmail.com"
+
 This covid19 tracker is developed using html, javascript and css. A webserver is needed for system testing. 
 This system contains several information, including the exact number of Covid-19 cases in Malaysia as a
 whole, a graph that illustrate the trend of Covid-19 in the country, a table that shows the case information
