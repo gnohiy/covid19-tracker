@@ -9,4 +9,4 @@ for different states and some knowledge regarding Covid-19. The details are as f
 
 ![image](https://github.com/gnohiy/covid19-tracker/assets/105278322/e5a6379e-ab50-4d2f-86a7-df87d7139195)
 
-![image](https://github.com/gnohiy/covid19-tracker/assets/105278322/5affa6b1-0318-493f-a969-a073497b5449)
+![image](https://github.com/gnohiy/covid19-tracker/assets/105278322/79b4b364-97bd-4db7-862e-6cf007647b0f)
