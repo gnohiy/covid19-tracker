@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Covid-19 Tracker Malaysia</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="icon" type="image/gif" sizes="16*16" href="img/icon.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script>
+          $(document).ready(function(){
+         $("#myinput").on("keyup",function(){
+           var value = $(this).val().toLowerCase();
+           $("#myTable tr").filter(function(){
+         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+           });
+         });
+       });
+        </script>
+
+    </head>
+    <body>
+
+      <header>
+      <div class="hder">
+        <h3>C<img src="img/covidlogo.png" alt="covid logo" width="37" height="37">vid-19 <span>Tracker</span>
+        <img src="img/malaysia.png" alt="malaysia flag" width="60" height="33"></h3>
+        <div class="hder2">
+        <ul>
+          <li><a href="CovidTracker.html">Cases Update</a></li>
+          <li><a href="MoreInfo.html">More Info</a></li>
+        </ul>
+        </div>
+      </div>
+      </header>
+
+      <main>
+      <div class="livdate">
+          <script>
+            var currentDate = new Date();
+            var month = currentDate.getMonth();
+            var day = currentDate.getDate();
+            var year = currentDate.getFullYear();
+            var fullDate = "Date: " + day + "/" + month + "/" + year;
+            document.write(fullDate);
+          </script>
+      </div>
+      <div class="overall">
+        <h1 class="title">Overall Statistics</h1>
+        <div class="group">
+          <div class="cases">
+            <div class="all">
+              <div class="name">Total Cases</div>
+              <div class="num">4032435</div>
+              <div class="num2">+21483</div>
+            </div>
+            <div class="recover">
+              <div class="name">Recovered</div>
+              <div class="num">3745229</div>
+              <div class="num2">+32561</div>
+            </div>
+            <div class="death">
+              <div class="name">Deaths</div>
+              <div class="num">34535</div>
+              <div class="num2">+73</div>
+            </div>
+          </div>
+          <div class="grafbg">
+            <div class="grafarea">
+              <canvas id="cvgraf"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="casetable">
+        <h1 class="tbletitle">Malaysia's States Covid Info</h1>
+        <div class="tysrch">
+          <input type="search" class="intxt" id="myinput" placeholder="Enter the text">
+        </div>
+        <div class="tble1">
+          <table id="covidstatus">
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>State</th>
+                <th>Flag</th>
+                <th>Today's Cases</th>
+                <th>Today's Recovered</th>
+                <th>Today's Deaths</th>
+              </tr>
+            </thead>
+            <tbody id="myTable">
+              <tr>
+                <td>1</td>
+                <td>Johor</td>
+                <td><img src="img/johor.png" alt="johor flag" width="50" height="30"></td>
+                <td>927</td>
+                <td>2926</td>
+                <td>11</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Kedah</td>
+                <td><img src="img/kedah.png" alt="kedah flag" width="50" height="30"></td>
+                <td>1219</td>
+                <td>2468</td>
+                <td>9</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Kelantan</td>
+                <td><img src="img/kelantan.png" alt="kelantan flag" width="50" height="30"></td>
+                <td>609</td>
+                <td>1484</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Melaka</td>
+                <td><img src="img/melaka.png" alt="melaka flag" width="50" height="30"></td>
+                <td>536</td>
+                <td>266</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Negeri Sembilan</td>
+                <td><img src="img/negerisembilan.png" alt="negerisembilan flag" width="50" height="30"></td>
+                <td>1061</td>
+                <td>1978</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Pahang</td>
+                <td><img src="img/pahang.png" alt="pahang flag" width="50" height="30"></td>
+                <td>959</td>
+                <td>1964</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Perak</td>
+                <td><img src="img/perak.png" alt="perak flag" width="50" height="30"></td>
+                <td>1170</td>
+                <td>1524</td>
+                <td>19</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Perlis</td>
+                <td><img src="img/perlis.png" alt="perlis flag" width="50" height="30"></td>
+                <td>131</td>
+                <td>258</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Pulau Pinang</td>
+                <td><img src="img/pulaupinang.png" alt="pulaupinang flag" width="50" height="30"></td>
+                <td>1295</td>
+                <td>2788</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Sabah</td>
+                <td><img src="img/sabah.png" alt="sabah flag" width="50" height="30"></td>
+                <td>402</td>
+                <td>1309</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>Sarawak</td>
+                <td><img src="img/sarawak.png" alt="sarawak flag" width="50" height="30"></td>
+                <td>1547</td>
+                <td>1791</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>Selangor</td>
+                <td><img src="img/selangor.png" alt="selangor flag" width="50" height="30"></td>
+                <td>7452</td>
+                <td>9199</td>
+                <td>11</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>Terengganu</td>
+                <td><img src="img/terengganu.png" alt="terengganu flag" width="50" height="30"></td>
+                <td>584</td>
+                <td>863</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>W.P. Kuala Lumpur</td>
+                <td><img src="img/kualalumpur.png" alt="kualalumpur flag" width="50" height="30"></td>
+                <td>3433</td>
+                <td>3358</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>W.P. Labuan</td>
+                <td><img src="img/labuan.png" alt="labuan flag" width="50" height="30"></td>
+                <td>93</td>
+                <td>154</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>W.P. Putrajaya</td>
+                <td><img src="img/putrajaya.png" alt="putrajaya flag" width="50" height="30"></td>
+                <td>65</td>
+                <td>231</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="covidnow">
+        <h2>Click For More Details <a href="https://covidnow.moh.gov.my/cases/">COVIDNOW</a></h2>
+      </div>
+
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+        graph();
+	      async function graph(){
+		        const coord  = await fetchdata();
+		        const data = {
+		          labels: coord.labels,
+		          datasets: [{
+			          label: coord.casetype1,
+			          data: coord.ncase,
+			          backgroundColor: '#000000',
+			          borderColor: '#000000',
+			          tension: 0.5,
+                pointRadius:0.7
+		          },{
+			          label: coord.casetype2,
+			          data: coord.rcase,
+			          backgroundColor: '#1FCD14',
+			          borderColor: '#1FCD14',
+			          tension: 0.5,
+                pointRadius:0.7
+		          },{
+			          label: coord.casetype3,
+			          data: coord.dcase,
+			          backgroundColor: '#FF0000',
+		          	borderColor: '#FF0000',
+			          tension: 0.5,
+                pointRadius:0.7
+		          }]
+		        };
+
+	        const config = {
+		        type: 'line',
+		        data,
+		        options: {
+			        scales: {
+			          y: {
+				          beginAtZero: true
+			          }
+			        }
+		        }
+	        };
+
+	        const cvgraf = new Chart(
+		        document.getElementById('cvgraf'),
+		        config
+	        );
+	      };
+
+	      async function fetchdata(){
+		      const labels = [];
+		      const ncase = [];
+		      const rcase = [];
+	      	const dcase = [];
+	      	const fback = await fetch('http://localhost/covidtracker/casesmalaysia.csv');
+	      	const gdata = await fback.text();
+	      	const graf = gdata.split('\n').slice(1);
+		      graf.forEach(row => {
+			      const clmn = row.split(',');
+			      const date = clmn[0];
+		      	const ncnum = clmn[1];
+		      	const rcnum = clmn[2];
+		      	const dcnum = clmn[3];
+		      	labels.push(date);
+		      	ncase.push(ncnum);
+		      	rcase.push(rcnum);
+		      	dcase.push(dcnum);
+	      });
+
+		      const casetype1 = 'New Cases';
+		      const casetype2 = 'Recovered Cases';
+		      const casetype3 = 'Death Cases';
+
+		      console.log(ncase);
+		      return{ labels, ncase, rcase, dcase, casetype1, casetype2, casetype3 };
+	      }
+      </script>
+      </main>
+    </body>
+
+    <footer>
+      <div class="fter">
+        <h3>Covid-19 Cases In Malaysia's States</h3><br><br>
+        <p>This website is designed with the aim to display the status of
+           COVID-19 cases in Malaysia's states. With this website, the citizens
+           can have a better understanding of COVID-19 cases status and its
+           severity in Malaysia.</p><br><br>
+        <div class="dnp">
+          <p>Designed and Prepared by: TAY YI HONG (1191100713)</p>
+        </div>
+      </div>
+    </footer>
+</html>

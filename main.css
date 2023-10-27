@@ -1,0 +1,262 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.hder{
+  width: 100%;
+  height: 138px;
+  padding: 20px;
+  display: block;
+  position: relative;
+  background-color: #C1D1FF;
+  box-shadow: 0 0 2px #000;
+}
+
+.hder h3{
+  color: #333;
+  margin: 0;
+  text-transform: uppercase;
+  padding-bottom: 30px;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.hder span{
+  color: #8E0E0E;
+}
+
+.hder li{
+  display: inline;
+}
+
+.hder li a{
+  font-size: 23px;
+  font-weight: bold;
+  color: #FEFEFF;
+  text-decoration: none;
+  padding: 20px;
+  transition: 0.3s ease;
+}
+
+.hder li a:hover{
+  color: #000000;
+}
+
+.livdate{
+  padding-top: 20px;
+  padding-right: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  text-align: right;
+}
+
+.overall{
+  width: 100%;
+  padding: 110px;
+  padding-top: 10px;
+  position: relative;
+}
+
+.title{
+  color: #000000;
+  font-size: 2.5rem;
+  margin-bottom: 2.3rem;
+}
+
+.cases{
+    width: 160px;
+    height: 342px;
+    margin-top: 60px;
+    margin-left: 60px;
+    padding-top: 1px;
+    background-color: #000000;
+    border-radius: 10px;
+}
+
+.group{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.cases .all{
+  width: 140px;
+  height: 100px;
+  padding-top: 10px;
+  margin: 10px;
+  background-color: #FBFBFB;
+  border-radius: 5px;
+}
+
+.cases .recover{
+  width: 140px;
+  height: 100px;
+  padding-top: 10px;
+  margin: 10px;
+  background-color: #FBFBFB;
+  border-radius: 5px;
+}
+
+.cases .death{
+  width: 140px;
+  height: 100px;
+  padding-top: 10px;
+  margin: 10px;
+  background-color: #FBFBFB;
+  border-radius: 5px;
+}
+
+.cases .name{
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #000000;
+}
+
+.all .num{
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.recover .num{
+  font-size: 2em;
+  font-weight: bold;
+  color: #15A50B;
+}
+
+.death .num{
+  font-size: 2em;
+  font-weight: bold;
+  color: #E0260F;
+}
+
+.cases .num2{
+  font-size: 1em;
+}
+
+.grafbg {
+  padding-left: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.grafarea {
+  width: 900px;
+  padding: 20px;
+  border-radius: 5px;
+  border: solid 8px #000000;
+  background: #FEFFFF;
+}
+
+.tbletitle{
+  color: #000000;
+  font-size: 2.5rem;
+  margin-bottom: 2.3rem;
+}
+
+.casetable{
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  margin-bottom: 3rem;
+}
+
+.casetable .tble1{
+  width: 600px;
+  position: relative;
+  border-radius: 12px;
+  background: #E2E7F3;
+  box-shadow: 0 0 8px #0000;
+  overflow-x: auto;
+}
+
+.casetable .tble1 table{
+  position: relative;
+  border-collapse: collapse;
+}
+
+.casetable .tble1 table thead th{
+  background: white;
+  color: black;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 0.8rem 1rem;
+}
+
+table tbody tr td{
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 1px solid #e0f2f1;
+}
+
+.tysrch{
+  max-width: 400px;
+  width: 100%;
+  height: 40px;
+  background: #ffff;
+  position: relative;
+  margin-bottom: 2rem;
+  border-radius: 60px;
+  overflow: hidden;
+}
+
+.tysrch .intxt{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.covidnow{
+  padding-bottom: 50px;
+}
+
+footer{
+  display: flex;
+  fles-flow: row wrap;
+  padding: 30px;
+  color: #4B4B4D;
+  background-color: #C1D1FF;
+  box-shadow: 0 0 2px #000;
+}
+
+.fter h3{
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.fter p{
+  padding-left: 200px;
+  padding-right: 200px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.fter .dnp p{
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+}
